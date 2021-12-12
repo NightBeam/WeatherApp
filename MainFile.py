@@ -49,8 +49,8 @@ class WeatherApp(App):
     def click(self, event):
         htmldatas = self.datasReader.OpenFileJson
         now = datetime.datetime.now()
-        tomorrow = htmldatas['date']
-        if()
+        #tomorrow = htmldatas['date']
+        #if()
 
         wF = Weather_Forecaster(htmldatas['links'], htmldatas['headers'][0])
         a1= wF.GetSpeedWind()
