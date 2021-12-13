@@ -8,8 +8,6 @@ from kivy.config import Config
 from kivy.core.window import Window
 from WeatherForecaster import Weather_Forecaster
 import json
-import datetime
-
 
 Config.set('graphics', 'width', '256')
 Config.set('graphics', 'height', '512')
@@ -48,9 +46,6 @@ class WeatherApp(App):
 
     def click(self, event):
         htmldatas = self.datasReader.OpenFileJson
-        now = datetime.datetime.now()
-        #tomorrow = htmldatas['date']
-        #if()
 
         wF = Weather_Forecaster(htmldatas['links'], htmldatas['headers'][0])
         a1= wF.GetSpeedWind()
